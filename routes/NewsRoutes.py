@@ -1,17 +1,15 @@
 from flask import *
 from controllers.NewsController import NewsController
 import hashlib
-import redis
-from datetime import timedelta
+from config.Redis import redis_client, CACHE_TTL
 
 
-#Configure Redis
-redis_client = redis.Redis(host='localhost', port=6379, db=0)
+
 
 routes = Blueprint("routes", __name__)
 news_controller = NewsController("mistralai") # default model name
 
-CACHE_TTL = timedelta(hours=1)  # cache time-to-live in seconds
+
 
 def get_cache_key(route_name, llm_name, keywords=None):
     """

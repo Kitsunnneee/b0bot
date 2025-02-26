@@ -69,15 +69,17 @@ Or, run `./db_update/Update.py` manually in local.
 run `redis-server`
 if you want to monitor redis run in another terminal   `redis-cli monitor`
 
+To run the test on redis use this command `python -m unittest tests/unitTest_redis.py `
 
-7. Run the flask app
+
+8. Run the flask app
 
 `flask --app app.py run`
 
 > By default, the home page will open. The routes have to be defined manually.
 
 
-8. We have added support for the following routes:
+9. We have added support for the following routes:
 ```
 /llama          # Loads the Meta-Llama-3-8B-Instruct
 /gemma          # Loads the Gemma-2b
@@ -89,7 +91,7 @@ if you want to monitor redis run in another terminal   `redis-cli monitor`
 > You can do so by visiting this [link](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct).
 
 
-8. Two available url paths
+10. Two available url paths
 ```
 /<llm-name>/news
 /<llm-name>/news_keywords?keywords=[Place news keywords here]
