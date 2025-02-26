@@ -14,3 +14,4 @@ pinecone-client
 langchain-pinecone
 sentence-transformers
 redis
+langchain_community
