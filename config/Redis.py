@@ -1,7 +1,21 @@
+import os
 import redis
 from datetime import timedelta
 
-#Configure Redis
-redis_client = redis.Redis(host='localhost', port=6379, db=0)
+# Read from environment variables
+REDIS_HOST = os.getenv("REDIS_HOST", "localhost")  
+REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))  
+REDIS_DB = int(os.getenv("REDIS_DB", 0))  
+REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", None) 
 
-CACHE_TTL = timedelta(hours=1)  # cache time-to-live in seconds
+# Create Redis client
+redis_client = redis.Redis(
+    host=REDIS_HOST,
+    port=REDIS_PORT,
+    db=REDIS_DB,
+    password=REDIS_PASSWORD,
+    decode_responses=True,  
+)
+
+# Cache Time-to-Live
+CACHE_TTL = timedelta(hours=1)
