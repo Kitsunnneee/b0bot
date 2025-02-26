@@ -43,11 +43,18 @@ https://huggingface.co/
 4. Add huggingface token in `.env` file
 
 ```
-# HuggingFace
-HUGGINGFACE_TOKEN='[Your_hugging_face_token_here]'
+# Hugging Face API Token
+HUGGINGFACE_TOKEN=[your_hugging_face_token_here]
 
-# Pinecone
-PINECONE_API_KEY='[Your pinecone api here]'
+# Pinecone API Key
+PINECONE_API_KEY=[your_pinecone_api_key_here]
+
+# Redis Configuration
+REDIS_HOST=[Redis host url]
+REDIS_PORT=[Redis port]
+REDIS_DB=[Redis DB you want to use]
+REDIS_PASSWORD=[Redis password if you have any]
+
 ```
 
 
