@@ -64,6 +64,11 @@ client = Pinecone(api_key={PINECONE_API}) # Replace the string with yours
 Run `./db_update/Update.py` as a worker on a cloud service (e.g. heroku).
 Or, run `./db_update/Update.py` manually in local.
 
+7. Run redis-server
+
+run `redis-server`
+if you want to monitor redis run in another terminal   `redis-cli monitor`
+
 
 7. Run the flask app
 
